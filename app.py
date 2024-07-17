@@ -83,13 +83,11 @@ if selected == "ChatBot":
             chat.send_message(prompt)
             response = f"{chat.last.text}"
         except:
-            response = f"Faild Connecting With API'S :lol:"
-	
-        with st.spinner('Wait for it...'):
-            time.sleep(2)  # Simulate processing delay
-            with st.chat_message('assistant'):
+            response = f"Faild Connecting With API'S :lol:
+	    
+        with st.chat_message('assistant'):
                 st.markdown(response)
-            st.session_state.messages.append({"role": "assistant", "content": response})
+        st.session_state.messages.append({"role": "assistant", "content": response})
 
     else:
 	    st.markdown('''
