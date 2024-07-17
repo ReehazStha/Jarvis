@@ -3,6 +3,7 @@ from streamlit_lottie import st_lottie
 from streamlit_option_menu import option_menu
 import requests
 import google.generativeai as genai
+import time
 st.set_page_config(page_title="Practice Page", page_icon=":tada:", layout="wide")
 genai.configure(api_key="AIzaSyDamDyhxxAKQXhfsFbImw65-L_rehmbcQg")
 model = genai.GenerativeModel('gemini-pro')
@@ -83,8 +84,10 @@ if selected == "ChatBot":
             response = f"{chat.last.text}"
         except:
             response = f"Faild Connecting With API'S :lol:"
-	st.spinner()
+	
         with st.chat_message('assistant'):
+	    with st.spinner('Wait ....'):
+		    time.sleep(2)
             st.markdown(response)
         st.session_state.messages.append({"role":"assistant", "content": response})
 
