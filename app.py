@@ -75,7 +75,7 @@ elif selected == "ChatBot":
             st.markdown(message["content"])
 
     # Input prompt for user
-    prompt = st.text_input('Ask me ......')
+    prompt = st.chat_input('Ask me ......')
 
     # Process user input and generate response
     if prompt:
