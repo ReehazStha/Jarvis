@@ -83,7 +83,7 @@ if selected == "ChatBot":
             chat.send_message(prompt)
             response = f"{chat.last.text}"
         except:
-            response = f"Faild Connecting With API'S :lol:
+            response = f"Faild Connecting With API'S :lol:"
 	    
         with st.chat_message('assistant'):
                 st.markdown(response)
