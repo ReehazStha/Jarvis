@@ -85,9 +85,9 @@ if selected == "ChatBot":
         except:
             response = f"Faild Connecting With API'S :lol:"
 	
-        with st.chat_message('assistant'):
-	         with st.spinner('Wait for it...'):
-                time.sleep(5)
+        with st.chat_message('assistant'): 
+	    with st.spinner('Wait for it...'):
+                    time.sleep(5)
             st.markdown(response)
         st.session_state.messages.append({"role":"assistant", "content": response})
 
