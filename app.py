@@ -93,7 +93,8 @@ if selected == "ChatBot":
 
     else:
 	st.markdown('''
-        <h1 style='text-align: center'>Jarvis ChatBot</h1>
-	<p style='text-align: center'>By Reehaz Shrestrha</p>
-        ''')
+ 
+ <h1 style='text-align: center'>Jarvis ChatBot</h1>
+ <p style='text-align: center'>By Reehaz Shrestrha</p>
+''')
 	
