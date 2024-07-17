@@ -74,16 +74,21 @@ if selected == "ChatBot":
     prompt = st.chat_input('Ask me ......')
     if prompt:
         with st.chat_message('user'):
-            st.markdown(f"You: {prompt}")
+            st.markdown(f"{prompt}")
         st.session_state.messages.append({"role":"user", "content": prompt})
 
         
         try:
             chat.send_message(prompt)
-            response = f"JARVIS: {chat.last.text}"
+            response = f"{chat.last.text}"
         except:
             response = f"Faild Connecting With API'S :lol:"
-
+	st.spinner()
         with st.chat_message('assistant'):
             st.markdown(response)
         st.session_state.messages.append({"role":"assistant", "content": response})
+
+    else:
+	st.markdown('''<h1 style='text-align: center'>Jarvis ChatBot</h1>
+	<p style='text-align: center'>By Reehaz Shrestrha</p>''')
+	
