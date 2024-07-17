@@ -92,10 +92,11 @@ if selected == "ChatBot":
             st.session_state.messages.append({"role": "assistant", "content": response})
 
     else:
-	st.markdown('''
- 
- 
- <h1 style='text-align: center'>Jarvis ChatBot</h1>
+	    st.markdown('''
+     <h1 style='text-align: center'>Jarvis ChatBot</h1>
  <p style='text-align: center'>By Reehaz Shrestrha</p>
-        ''')
+ 
+     ''')
+     
+	
 	
