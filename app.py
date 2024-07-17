@@ -88,8 +88,8 @@ if selected == "ChatBot":
         with st.chat_message('assistant'): 
 	    with st.spinner('Wait for it...'):
                     time.sleep(5)
-            st.markdown(response)
-        st.session_state.messages.append({"role":"assistant", "content": response})
+                    st.markdown(response)
+                    st.session_state.messages.append({"role":"assistant", "content": response})
 
     else:
 	st.markdown('''<h1 style='text-align: center'>Jarvis ChatBot</h1>
